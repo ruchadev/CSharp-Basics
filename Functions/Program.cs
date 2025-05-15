@@ -160,4 +160,5 @@ class Function
         double result = Pi * r * r;
         Console.WriteLine($"Area of the circle is: {result}");
     }
+    
 }
