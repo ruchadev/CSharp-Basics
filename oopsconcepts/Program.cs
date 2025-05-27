@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Base class
+// // Base class
 class Animal
 {
     public Animal()
@@ -84,3 +84,34 @@ class Program
         fruit.fly();
     }
 }
+
+//Note - By using SEALED keyword you can prevent calss from being inheritred
+//also you can use STatic keyword in base class
+
+//diffrence is you can create the object of sealed class but cannot create object of static class
+
+class youtube
+{
+    public virtual void Subscribe()
+    {
+        System.Console.WriteLine("Subscribe to youtube");
+    }
+}
+class SocialMedia : youtube
+{
+    public new void Subscribe()
+    {
+        System.Console.WriteLine("subscribe me on other apps");
+    }
+}
+
+class mainClass
+{
+    static void Main(string[] args)
+    {
+        youtube youtube = new SocialMedia();
+        youtube.Subscribe();
+        //Console.ReadLine();
+    }
+}
+
